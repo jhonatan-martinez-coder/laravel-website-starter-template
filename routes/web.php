@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
+use App\Livewire\CreateCustomNavBarOption;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MainController::class, 'index']);
+
+Route::get('/products/{id}/details', [MainController::class, 'productDetails']);
+
+Route::get('/page/{slug}', [MainController::class, 'getPageBySlug']);
