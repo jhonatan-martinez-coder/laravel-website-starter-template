@@ -27,13 +27,13 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{$option->name}}</a>
                             <div class="dropdown-menu m-0 p-0">
                                 @foreach ($childrenOptions as $child)
-                                    <a href={{ url('/page/'.$child->url) }} class="dropdown-item">{{$child->name}}</a>
+                                    <a href={{ url($child->url) }} class="dropdown-item">{{$child->name}}</a>
                                 @endforeach
                             </div>
                         </div>
                         @break
                     @default
-                        <a href={{ url( '/page/' . $option->url ) }} class="nav-item nav-link">{{$option->name}}</a>
+                        <a href={{ url($option->url ) }} class="nav-item nav-link">{{$option->name}}</a>
                 @endswitch
 
             @endforeach
