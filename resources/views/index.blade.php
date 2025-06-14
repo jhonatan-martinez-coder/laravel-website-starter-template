@@ -20,7 +20,7 @@
         <!--- just for placing a background color --->
         <div class="container-fluid p-0"
             style="background-color:var(--bs-light); width: 100%; height: 99px; color: black">
-        <!--- no content goes here --->
+            <!--- no content goes here --->
         </div>
     </div>
     <!-- Navbar & Hero End -->
@@ -64,46 +64,48 @@
     </div>
     <!-- Carousel End -->
 
-    <!-- product Start --> <!---- use this for tour packages --->
-    <div class="container-fluid product py-5">
-        <div class="container py-5">
-            <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                <h5 class="section-title px-3">Experiencias</h5>
-                <h1 class="mb-4">Destinos Populares</h1>
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt tenetur
-                    sapiente atque. Magni non explicabo beatae sit, vel reiciendis consectetur numquam id similique sunt
-                    error obcaecati ducimus officia maiores.
-                </p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <!--- loop trough the available list of destinations ---->
-                @foreach ($tours as $tour)
+    <!-------- sectin of products grouped by category --------->
+    @foreach ($listOfCategorizedProducts as $productCategory)
+    <section id={{ strtolower($productCategory['name']) }}>
+        <div class="container-fluid product pt-3 pb-1 mt-3">
+            <div class="container">
+                <!------------ category section title ------------>
+                <div class="mx-auto text-center mb-3">
+                    <h3 class="section-title px-3">{{ $productCategory['name'] }}</h3>
+                </div>
+            
+                <div class="row g-4 justify-content-center">
+                    @foreach ($productCategory['products'] as $product)
+                    <!---product---->
                     <div class="col-lg-4 col-md-6">
                         <div class="product-item">
                             <div class="product-img">
                                 <div class="product-img-inner">
-                                    <img class="img-fluid w-100 rounded-top" src={{ asset('/storage/' . $tour->thumbnail) }}
-                                        alt="Image" style="height: 400px;">
+                                    <img class="img-fluid w-100 rounded-top" src={{ asset('/storage/' . $product->thumbnail) }}
+                                            alt="Image" style="height: 400px;">
                                     <div class="product-icon">
-                                        <a href={{ url('/products/' . $tour->id . '/details') }} class="my-auto"><i
-                                                class="fas fa-link fa-2x text-white"></i></a>
+                                        <a href={{ url('/products/' . $product->id . '/details') }} class="my-auto"><i
+                                                    class="fas fa-link fa-2x text-white"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-content border border-top-0 rounded-bottom p-4">
-                                <a href={{ url('/products/' . $tour->id . '/details') }} class="h4 mb-5"
-                                    style="width: 100%;">{{ $tour->title}}</a>
-                                <a href={{ url('/products/' . $tour->id . '/details') }}
+                                <a href={{ url('/products/' . $product->id . '/details') }} class="h4 mb-5"
+                                    style="width: 100%;">{{ $product->title}}</a>
+                                <a href={{ url('/products/' . $product->id . '/details') }}
                                     class="btn btn-primary rounded-pill py-2 px-4 mt-3 text-light" style="width: 100%;">Mas
                                     Información</a>
                             </div>
                         </div>
                     </div>
-                @endforeach
+                    <!--- End product---->
+                    @endforeach
+                </div>
             </div>
         </div>
-    </div>
-    <!-- product End -->
+    </section>
+    @endforeach
+    <!-------- sectin of products grouped by category --------->
 
     <!-- Testimonial Start -->
     <div class="container-fluid testimonial py-5">
