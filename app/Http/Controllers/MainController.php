@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
@@ -15,25 +16,54 @@ class MainController extends BaseController
 
     public function index()
     {
-        $products = Product::all();
-        return view('index', ['tours' => $products]);
+        $categorizedProducts = array();
+        $categories = Category::all();
+
+        foreach ($categories as $c) {
+            // get each category related to the product
+            $category = Category::find($c->id);
+            if (count($category->products) > 0) {
+                // get the products of each category
+                $data = array('name' => $category->name, 'products' => $category->products);
+                // push to array
+                array_push($categorizedProducts, $data);
+            }
+        }
+
+        return view('index', ['listOfCategorizedProducts' => $categorizedProducts]);
     }
 
     public function productDetails(string $id)
     {
-        $product = DB::table('products')->find($id);
+        $product = Product::find($id);
         // create new array of image urls
         $image_paths = array($product->thumbnail);
-        // decode the image array that belongs to the products
-        $product->images = json_decode($product->images);
         // add the images from the produc to the new array
         foreach ($product->images as $image) {
             array_push($image_paths, $image);
         }
         // set the new array to the product
         $product->images = $image_paths;
+        // products organized by category
+        $categorizedProducts = array();
+        foreach ($product->categories as $c) {
+            // get each category related to the product
+            $category = Category::find($c->id);
+            // get the products of each category and filter the array removing the product from the current page
+            $filteredProducts = array();
+            foreach ($category->products as $p) {
+                // pusth to array all products with id number different from current product
+                if ($p->id !== intval($id)) {
+                    array_push($filteredProducts, $p);
+                }
+            }
 
-        return view('product-details', ['product' => $product]);
+            $groupedProductsByCategory = array('categoryName' => $category->name, 'products' => $filteredProducts);
+            // push to array
+            array_push($categorizedProducts, $groupedProductsByCategory);
+        }
+
+        return view('product-details', ['product' => $product, "relatedProductsGroupByCategory" => $categorizedProducts]);
     }
 
     public function getPageBySlug(string $slug)
