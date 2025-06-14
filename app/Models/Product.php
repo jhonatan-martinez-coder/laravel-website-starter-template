@@ -21,4 +21,8 @@ class Product extends Model
     public $casts = [
         'images' => 'array'
     ];
+
+    public function categories(){
+        return $this->morphToMany(Category::class, 'categorizable');
+    }
 }
