@@ -7,8 +7,8 @@
                     <h4 class="mb-4 text-white">Comunicate con Nosotros</h4>
                     <p href=""><i class="fas fa-home me-2"></i> Bocagrande Av. San Martin Cra 2 # 8 – 67 Apartamento 2 - 12 b</p>
                     <p href=""><i class="fas fa-envelope me-2"></i> cartagena.trip.tours@hotmail.com</p>
-                    <p href=""><i class="fas fa-phone me-2"></i> +57 314 8510695</p>
                     <p href="" class="mb-3"><i class="fas fa-phone me-2"></i> +57 317 7417374</p>
+                    <p href=""><i class="fas fa-phone me-2"></i> +57 314 8510695</p>
                 </div>
             </div>
             <!--
