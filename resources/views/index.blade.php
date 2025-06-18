@@ -68,7 +68,7 @@
     @foreach ($listOfCategorizedProducts as $productCategory)
     <section style="padding-top: 4rem" id={{ strtolower($productCategory['name']) }} >
         <div class="container-fluid product pt-3 pb-1 mt-3">
-            <div class="container">
+            <div class="container-lg">
                 <!------------ category section title ------------>
                 <div class="mx-auto text-center mb-3">
                     <h3 class="section-title px-3">{{ $productCategory['name'] }}</h3>
@@ -77,7 +77,7 @@
                 <div class="row g-4 justify-content-center">
                     @foreach ($productCategory['products'] as $product)
                     <!---product---->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="product-item">
                             <div class="product-img">
                                 <div class="product-img-inner">
