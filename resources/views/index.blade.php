@@ -66,7 +66,7 @@
 
     <!-------- sectin of products grouped by category --------->
     @foreach ($listOfCategorizedProducts as $productCategory)
-    <section id={{ strtolower($productCategory['name']) }}>
+    <section style="padding-top: 4rem" id={{ strtolower($productCategory['name']) }} >
         <div class="container-fluid product pt-3 pb-1 mt-3">
             <div class="container">
                 <!------------ category section title ------------>
