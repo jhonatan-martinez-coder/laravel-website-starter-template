@@ -1014,6 +1014,30 @@
 }
 /*** Travel Guide End ***/
 
+.custom-product-image {
+    object-fit: fill;
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .custom-product-image {
+        height: 280px;
+    }
+}
+
+@media (min-width: 768px) {
+    .custom-product-image {
+        height: 350px;
+    }
+}
+
+@media (min-width: 992px) {
+    .custom-product-image {
+        height: 320px;
+    }
+}
 
 /*** product Start ***/
 .product .product-item .product-img {

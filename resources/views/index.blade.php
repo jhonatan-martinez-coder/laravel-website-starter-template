@@ -81,8 +81,8 @@
                         <div class="product-item">
                             <div class="product-img">
                                 <div class="product-img-inner">
-                                    <img class="img-fluid w-100 rounded-top" src={{ asset('/storage/' . $product->thumbnail) }}
-                                            alt="Image" style="height: 400px;">
+                                    <img class="custom-product-image" src={{ asset('/storage/' . $product->thumbnail) }}
+                                            alt="Image">
                                     <div class="product-icon">
                                         <a href={{ url('/products/' . $product->id . '/details') }} class="my-auto"><i
                                                     class="fas fa-link fa-2x text-white"></i></a>
