@@ -9,7 +9,7 @@
         
         <img src="{{ asset('trip_tours_cartagena_logo-Photoroom.png') }}" alt="cartagena_trip_tours_logo">
     </a>
-    <h1 class="m-0 text-primary">Cartagena Trip & Tours</h1>
+    <span class="m-0 span-as-title">Cartagena Trip & Tours</span>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="fa fa-bars"></span>
     </button>
