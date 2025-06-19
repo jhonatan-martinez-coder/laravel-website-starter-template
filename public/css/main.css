@@ -160,6 +160,12 @@
     font-size: 1.17rem;
 }
 
+@media (max-width: 575px){
+    .navbar .span-as-title {
+        display: none;
+    }
+}
+
 @media (min-width: 576px){
     .navbar .span-as-title {
         font-size: 1.5rem;
