@@ -75,7 +75,7 @@
                     <!--- product description --->
                     <?php echo $product->description ?>
                     <!----- booking button ------->
-                    <a class="btn btn-primary mt-3 text-light" href="#">
+                    <a class="btn btn-primary mt-3 text-light" href="https://api.whatsapp.com/send?phone=3177417374">
                         <i class="bi bi-whatsapp"></i>
                         Reservar</a>
                 </div>
