@@ -17,11 +17,6 @@
         <!-- Navbar Start -->
         @include('partials.navbar')
         <!-- Navbar End -->
-        <!--- just for placing a background color --->
-        <div class="container-fluid p-0"
-            style="background-color:var(--bs-light); width: 100%; height: 99px; color: black">
-            <!--- no content goes here --->
-        </div>
     </div>
     <!-- Navbar & Hero End -->
     <!-- Carousel Start -->
