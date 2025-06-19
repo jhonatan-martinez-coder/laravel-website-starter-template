@@ -15,11 +15,6 @@
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
         @include('partials.navbar')
-        <!--- just for placing a background color ---->
-        <div class="container-fluid p-0"
-            style="background-color:var(--bs-light); width: 100%; height: 99px; color: black">
-            <!---- no content goes here --->
-        </div>
     </div>
     <!-- Navbar End -->
 
