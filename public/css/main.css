@@ -259,6 +259,10 @@
     opacity: 1;
 }
 
+.navbar{
+    border-bottom: 1px solid #c2c2c2 ;
+}
+
 @media (max-width: 991.98px) {
     .sticky-top.navbar-light {
         position: relative;
@@ -302,7 +306,6 @@
         width: 100%;
         top: 0;
         left: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, .1);
         z-index: 999;
     }
     
