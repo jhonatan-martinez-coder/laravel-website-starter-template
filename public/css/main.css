@@ -394,27 +394,93 @@
     padding-top: 60px;
 }
 
-@media (max-width: 768px) {
-    .carousel .carousel-inner .carousel-item img,
-    .carousel .carousel-inner .carousel-item .carousel-caption {
-        height: 700px;
-        margin-top: -100px;
+/** carousel media queries for mobile devices **/
+@media (max-width: 480px) {
+
+    .carousel,
+    .carousel-control-next,
+    .carousel-control-prev,
+    .carousel-caption,
+    .carousel .carousel-inner .carousel-item img {
+        height: 30vh !important;
     }
 
-    .carousel {
-        height: 700px !important;
-    }
-
-    .carousel .carousel-control-prev .carousel-control-prev-icon,
-    .carousel .carousel-control-next .carousel-control-next-icon {
+    .carousel-control-prev .carousel-control-prev-icon,
+    .carousel-control-next .carousel-control-next-icon {
         opacity: 0;
     }
-    
-    .search-bar {
-        margin-top: -100px;
-        transition: 0.5s;
+
+    .carousel .carousel-caption {
+        top: 4rem !important;
+        padding-top: 6px;
+        margin-top: -40px
+    }
+
+    .carousel .carousel-inner .carousel-item {
+        height: 30vh;
+    }
+
+    .carousel .carousel-inner .carousel-item img {
+        position: absolute;
+        object-fit: fill;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+}
+
+/** carousel media queries for desktop desktop **/
+@media (min-width: 481px) {
+    .carousel,
+    .carousel-control-next,
+    .carousel-control-prev,
+    .carousel-caption,
+    .carousel .carousel-inner .carousel-item img {
+        height: 40vh !important;
+    }
+
+    .carousel .carousel-caption {
+        top: 6rem !important;
+        padding-top: 120px;
+        margin-top: -96px
     }
 }
+
+@media (min-width: 992px) {
+    .carousel,
+    .carousel-control-next,
+    .carousel-control-prev,
+    .carousel-caption,
+    .carousel .carousel-inner .carousel-item img {
+        height: 60vh !important;
+    }
+
+    .carousel .carousel-caption {
+        top: 8rem !important;
+        padding-top: 180px;
+        margin-top: -128px
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .carousel,
+    .carousel-control-next,
+    .carousel-control-prev,
+    .carousel-caption,
+    .carousel .carousel-inner .carousel-item img {
+        height: 80vh !important;
+    }
+
+    .carousel .carousel-caption {
+        top: 10rem !important;
+        padding-top: 200px;
+        margin-top: -90px
+    }
+
+}
+
 /*** Carousel Hero Header End ***/
 
 
