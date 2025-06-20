@@ -20,42 +20,40 @@
     </div>
     <!-- Navbar & Hero End -->
     <!-- Carousel Start -->
-    <div class="carousel-header">
-        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <img src={{ asset('img/carousel/places_33.jpeg') }} class="img-fluid d-block w-100" alt="Image">
-                </div>
-                <div class="carousel-item">
-                    <img src={{ asset('img/carousel/places_10.jpeg') }} class="img-fluid d-block w-100" alt="Image">
-                </div>
-                <div class="carousel-item">
-                    <img src={{ asset('img/carousel/places_27.jpeg') }} class="img-fluid d-block w-100" alt="Image">
-                </div>
-                <div class="carousel-item">
-                    <img src={{ asset('img/carousel/places_7.jpeg') }} class="img-fluid d-block w-100" alt="Image">
-                </div>
-                <div class="carousel-item">
-                    <img src={{ asset('img/carousel/slide_1.jpeg') }} class="img-fluid d-block w-100" alt="Image">
-                </div>
+    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <img src={{ asset('img/carousel/places_33.jpeg') }} alt="Image">
             </div>
-            <div class="carousel-caption" style="top: 10rem;">
-                <h1 class="text-light">Sample text</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Fugit, praesentium. Fuga eveniet quidem ut temporibus vitae
-                    unde aspernatur tenetur quam velit perferendis.
-                    Ipsa minus perspiciatis fugit? Assumenda recusandae ipsam
-                    delectus!</p>
+            <div class="carousel-item">
+                <img src={{ asset('img/carousel/places_10.jpeg') }}  alt="Image">
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon btn bg-primary" aria-hidden="false"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-                <span class="carousel-control-next-icon btn bg-primary" aria-hidden="false"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="carousel-item">
+                <img src={{ asset('img/carousel/places_27.jpeg') }} alt="Image">
+            </div>
+            <div class="carousel-item">
+                <img src={{ asset('img/carousel/places_7.jpeg') }} alt="Image">
+            </div>
+            <div class="carousel-item">
+                <img src={{ asset('img/carousel/slide_1.jpeg') }} alt="Image">
+            </div>
         </div>
+        <div class="carousel-caption">
+            <h1 class="text-light">Sample text</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Fugit, praesentium. Fuga eveniet quidem ut temporibus vitae
+            unde aspernatur tenetur quam velit perferendis.
+            Ipsa minus perspiciatis fugit? Assumenda recusandae ipsam
+            delectus!</p>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon btn bg-primary" aria-hidden="false"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+            <span class="carousel-control-next-icon btn bg-primary" aria-hidden="false"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
     <!-- Carousel End -->
 
