@@ -80,47 +80,49 @@
     </div>
     <!-- Blog End -->
 
+    @if($countRelatedProducts > 0)
     <!-------- related product to category of current product details --------->
-    <div class="container-fluid product py-2">
-        <div class="container">
-            <!------------ category section title ------------>
-            <div class="mb-3">
-                <h2>Relacionados</h2>
-            </div>
-            @foreach ($relatedProductsGroupByCategory as $categorizedProducts)
-            <!------------ grouped products by category ------------>
-            <div class="row" id={{ strtolower($categorizedProducts['categoryName']) }}>
-                @foreach ($categorizedProducts['products'] as $product)
-                    <div class="col-lg-4 col-md-6">
-                        <div class="product-item">
-                            <div class="product-img">
-                                <div class="product-img-inner">
-                                    <img class="img-fluid w-100 rounded-top" src={{ asset('/storage/' . $product->thumbnail)}}
-                                        alt="Image" style="height: 300px;">
-                                    <div class="product-icon">
-                                        <a href={{ url('/products/' . $product->id . '/details') }} class="my-auto"><i
-                                                class="fas fa-link fa-2x text-white"></i></a>
+        <div class="container-fluid product py-2">
+            <div class="container">
+                <!------------ category section title ------------>
+                <div class="mb-3">
+                    <h2>Relacionados</h2>
+                </div>
+                @foreach ($relatedProductsGroupByCategory as $categorizedProducts)
+                <!------------ grouped products by category ------------>
+                <div class="row" id={{ strtolower($categorizedProducts['categoryName']) }}>
+                    @foreach ($categorizedProducts['products'] as $product)
+                        <div class="col-lg-4 col-md-6">
+                            <div class="product-item">
+                                <div class="product-img">
+                                    <div class="product-img-inner">
+                                        <img class="img-fluid w-100 rounded-top" src={{ asset('/storage/' . $product->thumbnail)}}
+                                            alt="Image" style="height: 300px;">
+                                        <div class="product-icon">
+                                            <a href={{ url('/products/' . $product->id . '/details') }} class="my-auto"><i
+                                                    class="fas fa-link fa-2x text-white"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="product-content border border-top-0 rounded-bottom p-4">
-                                <a href={{ url('/products/' . $product->id . '/details') }} class="h4 mb-5"
-                                    style="width: 100%;">{{ $product->title}}</a>
-                                <a href={{ url('/products/' . $product->id . '/details') }}
-                                    class="btn btn-primary rounded-pill py-2 px-4 mt-3 text-light" style="width:
-                                            100%;">Mas
-                                    Información</a>
+                                <div class="product-content border border-top-0 rounded-bottom p-4">
+                                    <a href={{ url('/products/' . $product->id . '/details') }} class="h4 mb-5"
+                                        style="width: 100%;">{{ $product->title}}</a>
+                                    <a href={{ url('/products/' . $product->id . '/details') }}
+                                        class="btn btn-primary rounded-pill py-2 px-4 mt-3 text-light" style="width:
+                                                100%;">Mas
+                                        Información</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
+                </div>
+                <!------------ End of grouped products by category ------------>
                 @endforeach
             </div>
-            <!------------ End of grouped products by category ------------>
-            @endforeach
         </div>
-    </div>
     <!-------- End of related product to category of current product details --------->
-
+    @endif
+    
     <!---------- JAVASCRIPT ---------->
     @include('partials.footer')
 </body>

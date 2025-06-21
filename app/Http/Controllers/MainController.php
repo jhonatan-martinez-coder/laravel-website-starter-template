@@ -42,6 +42,7 @@ class MainController extends BaseController
         foreach ($product->images as $image) {
             array_push($image_paths, $image);
         }
+        $countRelatedProducts = 0;
         // set the new array to the product
         $product->images = $image_paths;
         // products organized by category
@@ -55,6 +56,7 @@ class MainController extends BaseController
                 // pusth to array all products with id number different from current product
                 if ($p->id !== intval($id)) {
                     array_push($filteredProducts, $p);
+                    $countRelatedProducts++;
                 }
             }
 
@@ -63,7 +65,7 @@ class MainController extends BaseController
             array_push($categorizedProducts, $groupedProductsByCategory);
         }
 
-        return view('product-details', ['product' => $product, "relatedProductsGroupByCategory" => $categorizedProducts]);
+        return view('product-details', ['product' => $product, "relatedProductsGroupByCategory" => $categorizedProducts, "countRelatedProducts" => $countRelatedProducts]);
     }
 
     public function getPageBySlug(string $slug)
