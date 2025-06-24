@@ -5,7 +5,8 @@
             <div class="col-md-7 col-lg-7 col-xl-4">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="mb-4 text-white">Comunicate con Nosotros</h4>
-                    <p href=""><i class="fas fa-home me-2"></i> Bocagrande Av. San Martin Cra 2 # 8 – 67 Apartamento 2 - 12 b</p>
+                    <p href=""><i class="fas fa-home me-2"></i> Bocagrande Av. San Martin Cra 2 # 8 – 67 Apartamento 2 -
+                        12 b</p>
                     <p href=""><i class="fas fa-envelope me-2"></i> cartagena.trip.tours@hotmail.com</p>
                     <p href="" class="mb-3"><i class="fas fa-phone me-2"></i> +57 317 7417374</p>
                     <p href=""><i class="fas fa-phone me-2"></i> +57 314 8510695</p>
@@ -42,5 +43,11 @@
 </div>
 <!-- Copyright End -->
 
+<!-- whatsapp button link -->
+<a href="https://api.whatsapp.com/send?phone=573177417374&text=Buenas%20tardes,%20deseo%20mas%20información." class="whatsapp-button">
+    <img src={{ asset('icons/whatsapp-icon.png') }} alt="whatsapp-icon-img">
+</a>
 <!-- Back to Top -->
-<a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+<a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
+    <i class="fa fa-arrow-up"></i>
+</a>
