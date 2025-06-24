@@ -1,0 +1,111 @@
+.product-details-carousel .synced-product-image-carousel {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.product-details-carousel #main-image {
+  background-color: #fffdfd;
+}
+
+.product-details-carousel #main-image .item {
+  padding: 0px 0px;
+  margin: 2px;
+  height: 180px;
+}
+
+.product-details-carousel #main-image .item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-details-carousel #thumbnails {
+  margin-top: 0.5rem;
+  border-top: 0.1rem solid #333;
+}
+
+.product-details-carousel #thumbnails .item {
+  height: 40px;
+  line-height: 40px;
+  padding: 0px;
+  margin: 2px;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.product-details-carousel #thumbnails .item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-details-carousel #main-image.owl-theme {
+  position: relative;
+}
+
+.product-details-carousel #main-image.owl-theme .owl-next,
+.product-details-carousel #main-image.owl-theme .owl-prev,
+.product-details-carousel #thumbnails.owl-theme .owl-next,
+.product-details-carousel #thumbnails.owl-theme .owl-prev {
+  display: none;
+}
+
+/** media queries for mobile devices */
+
+@media (min-width: 360px) {
+
+  .product-details-carousel #main-image .item {
+    height: 240px;
+  }
+}
+
+@media (min-width: 576px) {
+
+  .product-details-carousel #main-image .item {
+    height: 420px;
+  }
+
+  .product-details-carousel #thumbnails .item {
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .product-details-carousel .owl-theme .owl-nav [class*="owl-"] {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .product-details-carousel .owl-theme .owl-nav [class*="owl-"].disabled:hover {
+    background-color: #d6d6d6;
+  }
+
+  .product-details-carousel #main-image.owl-theme .owl-next,
+  .product-details-carousel #main-image.owl-theme .owl-prev {
+    background: #333;
+    width: 22px;
+    line-height: 40px;
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    display: block;
+  }
+
+  .product-details-carousel #main-image.owl-theme .owl-prev {
+    left: 10px;
+  }
+
+  .product-details-carousel #main-image.owl-theme .owl-next {
+    right: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .product-details-carousel #thumbnails .item {
+    height: 80px;
+    line-height: 80px;
+  }
+}

@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>Trip Tours Cartagena | Information de Paquetes</title>
     @include('partials.header')
+    <link rel="stylesheet" href={{ asset('css/productdetailscarousel.css') }}>
+    
 </head>
 
 <body>
@@ -22,46 +24,23 @@
     <div class="container-fluid">
         <div class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-6 col-md-12">
-                    <!-- Carousel Start -->
-                    <div id="carouselId" class="carousel slide mb-5" data-bs-ride="carousel">
-                        <ol class="carousel-indicators">
+                <div class="col-lg-6 col-md-6 col-md-12 product-details-carousel">
+                   <!-- carousel with thumbnails -->
+                    <div class="synced-product-image-carousel">
+                        <div id="main-image" class="owl-carousel owl-theme">
                             @foreach ($product->images as $index => $imagePath)
-                                @if ($index == 0)
-                                    <li data-bs-target="#carouselId" data-bs-slide-to="{{ $index }}" class="active"></li>
-                                @else
-                                    <li data-bs-target="#carouselId" data-bs-slide-to="{{ $index }}"></li>
-                                @endif
-                            @endforeach
-                        </ol>
-                        <div class="carousel-inner" role="listbox">
-                            <!------------- list of images for use into the carousel from the product images list ------------->
-                            @foreach ($product->images as $index => $imagePath)
-                            @if ($index == 0)
-                            <div class="carousel-item active">
-                                <img src={{ asset('/storage/' . $imagePath) }} alt="carousel-image"
-                                    class="rounded mx-auto d-block"
-                                    style="object-fit: contain; max-width: 100%; height: 20rem;">
-                            </div>
-                            @else
-                            <div class="carousel-item">
-                                <img src={{ asset('/storage/' . $imagePath) }} alt="carousel-image"
-                                    class="rounded mx-auto d-block"
-                                    style="object-fit: contain; max-width: 100%; height: 20rem;">
-                            </div>
-                            @endif
+                                <div class="item">
+                                    <img src={{ asset('/storage/' . $imagePath) }} alt="carousel-image">
+                                </div>
                             @endforeach
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselId"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon btn bg-primary" aria-hidden="false"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselId"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon btn bg-primary" aria-hidden="false"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                        <div id="thumbnails" class="owl-carousel owl-theme">
+                            @foreach ($product->images as $index => $imagePath)
+                                <div class="item">
+                                    <img src={{ asset('/storage/' . $imagePath) }} alt="carousel-image">
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
                 <!-- Carousel End -->
@@ -125,6 +104,7 @@
     
     <!---------- JAVASCRIPT ---------->
     @include('partials.footer')
+    <script src={{ asset('js/productdetailscarousel.js') }} ></script>
 </body>
 <footer>
     @include('partials.footer-info')
