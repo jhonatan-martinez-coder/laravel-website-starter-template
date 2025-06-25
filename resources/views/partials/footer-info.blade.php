@@ -4,7 +4,7 @@
         <div class="row g-5">
             <div class="col-md-7 col-lg-7 col-xl-4">
                 <div class="footer-item d-flex flex-column">
-                    <h4 class="mb-4 text-white">Comunicate con Nosotros</h4>
+                    <h4 class="mb-4">Comunicate con Nosotros</h4>
                     <p href=""><i class="fas fa-home me-2"></i> Bocagrande Av. San Martin Cra 2 # 8 – 67 Apartamento 2 -
                         12 b</p>
                     <p href=""><i class="fas fa-envelope me-2"></i> cartagena.trip.tours@hotmail.com</p>
