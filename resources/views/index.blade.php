@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Trip Tours Cartagena | Inicio</title>
+    <title>{{ env('WEBSITE_TITLE') }} | Inicio</title>
     @include('partials.header')
 </head>
 

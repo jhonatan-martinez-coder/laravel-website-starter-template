@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Trip Tours Cartagena | Information de Paquetes</title>
+    <title>{{ env('WEBSITE_TITLE') }} | Detalles del Producto</title>
     @include('partials.header')
     <link rel="stylesheet" href={{ asset('css/productdetailscarousel.css') }}>
     
