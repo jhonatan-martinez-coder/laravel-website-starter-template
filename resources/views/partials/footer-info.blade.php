@@ -11,16 +11,14 @@
                     <p href=""><i class="fas fa-phone me-2"></i> 555-555-555</p>
                 </div>
             </div>
-            <!--
             <div class="col-md-5 col-lg-5 col-xl-4">
                 <div class="footer-item d-flex flex-column">
-                    <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                    <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn-square btn btn-primary rounded-circle mx-1 my-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn-square btn btn-primary rounded-circle mx-1 my-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn-square btn btn-primary rounded-circle mx-1 my-1" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn-square btn btn-primary rounded-circle mx-1 my-1" href=""><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            -->
         </div>
     </div>
 </div>
