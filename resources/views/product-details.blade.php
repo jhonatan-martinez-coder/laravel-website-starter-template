@@ -24,7 +24,7 @@
     <div class="container-fluid">
         <div class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-6 col-md-12 product-details-carousel">
+                <div class="col-lg-7 col-md-12 product-details-carousel">
                    <!-- carousel with thumbnails -->
                     <div class="synced-product-image-carousel">
                         <div id="main-image" class="owl-carousel owl-theme">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <!-- Carousel End -->
-                <div class="col-lg-5 col-md-6 col-md-12" style="margin-left: 1rem">
+                <div class="col-lg-5 col-md-12">
                     <h1 class="my-4">{{$product->title}}</h1>
                     <!--- product description --->
                     <?php echo $product->description ?>
