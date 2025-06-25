@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Trip Tours Cartagena | {{$page->title}}</title>
+    <title>{{ env('WEBSITE_TITLE') }} | {{$page->title}}</title>
     @include('partials.header')
 </head>
 
