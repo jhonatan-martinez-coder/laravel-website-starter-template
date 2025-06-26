@@ -89,4 +89,8 @@ class MainController extends BaseController
     public function about(){
         return view('about');
     }
+
+    public function contactForm(){
+        return view('contact-form');
+    }
 }

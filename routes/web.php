@@ -20,3 +20,5 @@ Route::get('/', [MainController::class, 'index']);
 Route::get('/{slug}', [MainController::class, 'getPageBySlug']);
 
 Route::get('/products/{id}/details', [MainController::class, 'productDetails']);
+
+Route::get('/contact/form', [MainController::class, 'contactForm']);
