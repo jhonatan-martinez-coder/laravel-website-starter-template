@@ -13,10 +13,6 @@
     @include('partials.spinner')
     <!-- Spinner End -->
 
-    <!-- Topbar Start -->
-    @include('partials.topbar')
-    <!-- Topbar End -->
-
     <div class="container-fluid position-relative p-0">
         <!-- Navbar Start -->
         @include('partials.navbar')
