@@ -13,18 +13,10 @@
     @include('partials.spinner')
     <!-- Spinner End -->
 
-    <!-- Topbar Start -->
-    @include('partials.topbar')
-    <!-- Topbar End -->
-
-    <div class="container-fluid position-relative p-0">
+    <div class="container-fluid p-0">
         <!-- Navbar Start -->
         @include('partials.navbar')
         <!-- Navbar End -->
-        <!--- just for placing a background color ---->
-       <div class="container-fluid p-0" style="background-color:var(--bs-light); width: 100%; height: 99px; color: black">
-            <!---- no content goes here --->
-        </div>
     </div>
 
     <!-- 404 Start -->

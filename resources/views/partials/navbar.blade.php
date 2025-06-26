@@ -6,10 +6,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
     <a href="/" class="navbar-brand p-0">
-        
-        <img src="{{ asset('trip_tours_cartagena_logo-Photoroom.png') }}" alt="cartagena_trip_tours_logo">
+        <img src="{{ asset('main-website-logo.png') }}" alt="main-website-logo">
     </a>
-    <span class="m-0 span-as-title">Cartagena Trip & Tours</span>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="fa fa-bars"></span>
     </button>

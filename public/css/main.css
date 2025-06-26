@@ -1198,7 +1198,7 @@
 
 .product .product-item .product-img:hover .product-img-inner .product-icon {
     height: 100%;
-    background: rgba(19, 53, 123, .6);
+    background: rgba(255, 255, 255, 0.9);
     opacity: 1;
 }
 
@@ -1362,19 +1362,19 @@
 
 /*** Footer Start ***/
 .footer {
-    background: #e98e00;
+    background: #ffffff;
     /** before it was set to --bs-dark */
 }
 
 .footer .footer-item a {
     line-height: 30px;
-    color: var(--bs-white);
+    color: var(--bs-dark);
     transition: 0.5s;
 }
 
 .footer .footer-item p {
     line-height: 30px;
-    color: var(--bs-white);
+    color: var(--bs-dark);
     transition: 0.5s;
 }
 

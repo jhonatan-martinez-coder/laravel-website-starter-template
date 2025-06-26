@@ -24,7 +24,7 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->default()
-            ->brandName('Website CMS')
+            ->brandName('Website Administrator')
             ->id('admin')
             ->path('admin')
             ->login()
