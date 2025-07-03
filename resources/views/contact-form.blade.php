@@ -46,30 +46,31 @@
                         Valoramos tu opinión y la consideramos fundamental para nuestro
                         crecimiento y mejora continua en calidad y servicio
                     </p>
-                    <form class="contact-form">
+                    <form action="{{ url('/mail/send') }}" class="contact-form" method="POST">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control border-0" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control border-0" id="name" placeholder="Your Name" name="client_name">
                                     <label for="name">Su nombre</label>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control border-0" id="email"
+                                    <input type="email" class="form-control border-0" id="email" name="client_email"
                                         placeholder="Your Email">
                                     <label for="email">Su correo</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control border-0" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control border-0" id="subject" placeholder="Subject" name="subject">
                                     <label for="subject">Asunto</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control border-0" placeholder="Leave a message here"
+                                    <textarea class="form-control border-0" placeholder="Leave a message here" name="message"
                                         id="message" style="height: 160px"></textarea>
                                     <label for="message">Mensaje</label>
                                 </div>
