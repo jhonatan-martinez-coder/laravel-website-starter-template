@@ -51,26 +51,26 @@
                         <div class="row g-3">
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control border-0" id="name" placeholder="Your Name" name="client_name">
+                                    <input type="text" class="form-control border-0" id="name" placeholder="Your Name" name="client_name" required>
                                     <label for="name">Su nombre</label>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control border-0" id="email" name="client_email"
+                                    <input type="email" class="form-control border-0" id="email" name="client_email" required
                                         placeholder="Your Email">
                                     <label for="email">Su correo</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control border-0" id="subject" placeholder="Subject" name="subject">
+                                    <input type="text" class="form-control border-0" id="subject" placeholder="Subject" name="subject" required>
                                     <label for="subject">Asunto</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control border-0" placeholder="Leave a message here" name="message"
+                                    <textarea class="form-control border-0" placeholder="Leave a message here" name="message" required
                                         id="message" style="height: 160px"></textarea>
                                     <label for="message">Mensaje</label>
                                 </div>
