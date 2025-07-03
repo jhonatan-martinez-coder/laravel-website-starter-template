@@ -22,8 +22,8 @@
 
     <section>
         <div class="container py-5 d-flex justify-content-center">
-            <div class="row align-items-center">
-                <div class="col-lg-4">
+            <div class="row">
+                <div class="col-md-6 col-lg-5 mb-5">
                     <div class="bg-light rounded p-4">
                         <div class="text-center mb-4">
                             <i class="fa fa-map-marker-alt fa-3x text-primary"></i>
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-md-6 col-lg-7">
                     <h2 class="mb-2">Contactenos</h2>
                     <p class="mb-4">
                         Valoramos tu opinión y la consideramos fundamental para nuestro
@@ -48,34 +48,34 @@
                     </p>
                     <form action="{{ url('/mail/send') }}" class="contact-form" method="POST">
                         @csrf
-                        <div class="row g-3">
-                            <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
                                 <div class="form-floating">
                                     <input type="text" class="form-control border-0" id="name" placeholder="Your Name" name="client_name" required>
                                     <label for="name">Su nombre</label>
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-12 mb-3">
                                 <div class="form-floating">
                                     <input type="email" class="form-control border-0" id="email" name="client_email" required
                                         placeholder="Your Email">
                                     <label for="email">Su correo</label>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 mb-3">
                                 <div class="form-floating">
                                     <input type="text" class="form-control border-0" id="subject" placeholder="Subject" name="subject" required>
                                     <label for="subject">Asunto</label>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 mb-3">
                                 <div class="form-floating">
                                     <textarea class="form-control border-0" placeholder="Leave a message here" name="message" required
                                         id="message" style="height: 160px"></textarea>
                                     <label for="message">Mensaje</label>
                                 </div>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 mb-3">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensaje</button>
                             </div>
                         </div>
