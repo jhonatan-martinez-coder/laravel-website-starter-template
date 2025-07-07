@@ -50,29 +50,43 @@
                     <div class="row">
                         <div class="col-md-12 mb-3">
                             <div class="form-floating">
-                                <input type="text" class="form-control border-0" id="name" placeholder="Your Name" name="client_name" required>
+                                <input type="text" class="form-control border-0" id="name" placeholder="Your Name"
+                                    name="client_name" value="{{ old('client_name') }}">
                                 <label for="name">Su nombre</label>
                             </div>
+                            @error('client_name')
+                                <p class="text-danger my-2">{{$message}}</p>
+                            @enderror
                         </div>
                         <div class="col-md-12 mb-3">
                             <div class="form-floating">
-                                <input type="email" class="form-control border-0" id="email" name="client_email" required 
-                                placeholder="Your Email">
+                                <input type="email" class="form-control border-0" id="email" name="client_email"
+                                    placeholder="Your Email" value="{{ old('client_email') }}">
                                 <label for="email">Su correo</label>
                             </div>
+                            @error('client_email')
+                                <p class="text-danger my-2">{{$message}}</p>
+                            @enderror
                         </div>
                         <div class="col-12 mb-3">
                             <div class="form-floating">
-                                <input type="text" class="form-control border-0" id="subject" placeholder="Subject" name="subject" required>
+                                <input type="text" class="form-control border-0" id="subject" placeholder="Subject"
+                                    name="subject" value="{{ old('subject') }}">
                                 <label for="subject">Asunto</label>
                             </div>
+                            @error('subject')
+                                <p class="text-danger my-2">{{$message}}</p>
+                            @enderror
                         </div>
                         <div class="col-12 mb-3">
                             <div class="form-floating">
-                                <textarea class="form-control border-0" placeholder="Leave a message here" name="message" required 
-                                id="message" style="height: 160px"></textarea>
+                                <textarea class="form-control border-0" placeholder="Leave a message here"
+                                    name="message" id="message" style="height: 160px">{{ old('message') }}</textarea>
                                 <label for="message">Mensaje</label>
                             </div>
+                            @error('message')
+                                <p class="text-danger my-2">{{$message}}</p>
+                            @enderror
                         </div>
                         <div class="col-12 mb-3">
                             <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensaje</button>
