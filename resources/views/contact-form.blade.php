@@ -88,6 +88,20 @@
                                 <p class="text-danger my-2">{{$message}}</p>
                             @enderror
                         </div>
+                        <!------------- error validation messages ---------->
+                        @if (session()->has('success'))
+                            <div class="alert alert-success">
+                                <p>{{ session()->get('success') }}</p>
+                            </div>
+                        @endif
+                        @if (session()->has('error'))
+                            <div class="alert alert-danger">
+                                <p>{{ session()->get('error') }}</p>
+                            </div>
+                        @endif
+                        <!--------------- recaptcha --------------->
+                        <div class="g-recaptcha mb-3" data-sitekey={{config('services.recaptcha.key')}}></div>
+                        <!--------------- End recaptcha --------------->
                         <div class="col-12 mb-3">
                             <button class="btn btn-primary w-100 py-3" type="submit">Enviar Mensaje</button>
                         </div>
