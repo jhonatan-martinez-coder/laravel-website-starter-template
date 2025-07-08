@@ -41,7 +41,7 @@
 <!-- Copyright End -->
 
 <!-- whatsapp button link -->
-<a href="https://api.whatsapp.com/send?phone=." class="whatsapp-button">
+<a href="https://api.whatsapp.com/send?phone={{ env('MAIN_WHATSAPP_PHONE_NUMBER') }}" class="whatsapp-button">
     <img src={{ asset('icons/whatsapp-icon.png') }} alt="whatsapp-icon-img">
 </a>
 <!-- Back to Top -->
