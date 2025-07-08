@@ -33,8 +33,11 @@
                     @default
                         <a href={{ url($option->url ) }} class="nav-item nav-link">{{$option->name}}</a>
                 @endswitch
-
             @endforeach
+            <!-- contatct-form-page-->
+            @if (env('ENABLE_CONTACT_FORM'))
+                 <a href="/contact/form" class="nav-item nav-link">Contactenos</a>
+            @endif
         </div>
         <!--- <a href="" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Book Now</a> --->
     </div>
