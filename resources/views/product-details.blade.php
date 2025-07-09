@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{{ env('WEBSITE_TITLE') }} | Detalles del Producto</title>
+    <title>Detalles del Producto | {{ env('WEBSITE_TITLE') }}</title>
     @include('partials.header')
     <link rel="stylesheet" href={{ asset('css/productdetailscarousel.css') }}>
     

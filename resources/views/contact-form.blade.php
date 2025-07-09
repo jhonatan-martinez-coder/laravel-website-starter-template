@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{{ env('WEBSITE_TITLE') }} | Inicio</title>
+    <title>Contacto | {{ env('WEBSITE_TITLE') }} </title>
     @include('partials.header')
 </head>
 
