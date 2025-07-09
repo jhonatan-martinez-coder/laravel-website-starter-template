@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Trip Tours Cartagena | 404</title>
+    <title>404 | {{env('WEBSITE_TITLE')}}</title>
     @include('partials.header')
 </head>
 
