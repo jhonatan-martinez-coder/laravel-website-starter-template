@@ -1368,7 +1368,7 @@
 
 .footer .footer-item a {
     line-height: 30px;
-    color: var(--bs-dark);
+    color: var(--bs-white);
     transition: 0.5s;
 }
 
@@ -1382,6 +1382,18 @@
     letter-spacing: 2px;
     color: var(--bs-dark);
     /** before it was set to --bs-primary */
+}
+
+.footer .footer-img {
+    padding: 0px;
+    width: 100%;
+    height: 50%;
+}
+
+.footer .footer-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /*** Footer End ***/
