@@ -49,7 +49,7 @@ class CreateCustomNavBar extends Page implements HasForms, HasTable
         return [
             Forms\Components\Section::make()
                 ->schema([
-                    Forms\components\TextInput::make('name')
+                    TextInput::make('name')
                         ->required(),
                     Select::make('type')
                         ->options([
